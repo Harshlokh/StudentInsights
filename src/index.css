@@ -1,0 +1,555 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  cursor: url('/black-cursor.svg'), auto; /* Use the custom cursor and provide a fallback */
+}
+
+:root {
+
+  --bump-color: rgb(4, 14, 48); /* Default bump color */
+}
+
+
+
+.quotes {
+  font-size: 8rem;
+  font-family: "New Amsterdam", sans-serif;
+  color: #AC3B61;
+  display: flex;
+  position: relative;
+}
+.new-amsterdam-regular {
+  font-family: "New Amsterdam", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+*::selection {
+  background-color: rgb(122, 206, 140);
+}
+
+.line {
+  height: 2px;
+  background-color: #08e792e8;
+}
+
+.responsive-miniheading {
+  font-family: 'New Amsterdam', sans-serif;
+  font-weight: 700; /* Bold font weight for the heading */
+  font-size: 2.5rem; /* Default font size for larger screens */
+  line-height: 1.2; /* Line height for better readability */
+  text-align: center; /* Center align the heading */
+  margin: 0; /* Remove default margins */
+  padding: 20px; /* Add padding around the heading */
+  box-sizing: border-box; /* Include padding in element’s total width and height */
+  color: #AC3B61; /* Default color for the heading text */
+  
+}
+
+
+
+.weirdpara {
+   
+  display: flex;
+  position: relative;
+  justify-content: center;
+  justify-items: center;
+  font-size: 25px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  word-spacing: 10px;
+  margin: 20px;
+
+}
+
+.center-wrapper {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  justify-items: center;
+}
+
+/* Styling the input field */
+.cssforinput {
+     width: 100%;                /* Makes the input take full width of the wrapper */
+    padding: 10px;              /* Adds padding inside the input field */
+    margin: 10px 0;             /* Adds space outside the input field */
+    border: 2px solid #000509;  /* Adds a black border */
+    border-radius: 5px;         /* Rounds the corners */
+    color: #060000;                /* Sets the text color */
+    font-size: 2rem;            /* Sets the font size */
+    background-color: #C5CBE3;  /* Sets the background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    transition: all 0.3s ease;  /* Adds a transition effect */
+    box-sizing: border-box;     /* Ensures padding does not affect the width */
+   
+  }
+
+  
+.cssforinput:focus {
+  border-color: #0b2a49;      /* Changes border color when focused */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhances the shadow on focus */
+  outline: none;              /* Removes the default outline */
+}
+
+.cssfortextarea {
+  width: 500px;
+  height: 200px;
+  background-color: #C5CBE3;
+  color: #000509;
+}
+
+
+.responsive-heading {
+  font-family: 'New Amsterdam', sans-serif;
+  font-weight: 700; /* Bold font weight for the heading */
+  font-size: 2.5rem; /* Default font size for larger screens */
+  line-height: 1.2; /* Line height for better readability */
+  text-align: center; /* Center align the heading */
+  margin: 0; /* Remove default margins */
+  padding: 20px; /* Add padding around the heading */
+  box-sizing: border-box; /* Include padding in element’s total width and height */
+  color: #f2eaea; /* Default color for the heading text */
+  z-index: 1;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInBottom 1s ease-out forwards;
+  
+}
+
+@keyframes fadeInBottom {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.responsive-heading.show {
+  animation: fadeInBottom 1s ease-out forwards; /* Triggered animation */
+}
+
+
+
+
+
+.responsive-miniheading {
+  font-family: 'New Amsterdam', sans-serif;
+  font-weight: 700; /* Bold font weight for the heading */
+  font-size: 2.5rem; /* Default font size for larger screens */
+  line-height: 1.2; /* Line height for better readability */
+  text-align: center; /* Center align the heading */
+  margin: 0; /* Remove default margins */
+  padding: 20px; /* Add padding around the heading */
+  box-sizing: border-box; /* Include padding in element’s total width and height */
+  color: #f7f3f3; /* Default color for the heading text */
+}
+
+.fit-container {
+  font-size: 4rem;
+  font-family: 'New Amsterdam', sans-serif;
+   display: flex;
+   position: relative;
+   justify-content: center;
+   justify-items: center;
+  
+}
+
+
+.shadowfrombehind {
+  transition: box-shadow 0.3s ease;
+}
+
+.shadowfrombehind:hover {
+  box-shadow: 0 0 20px 10px rgba(245, 242, 242, 0.8);
+  border-radius: 30px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  transition: scroll 1s ease-in-out;
+}
+
+
+.paragraph {
+  font-size: 1.2rem; /* Default font size for larger screens */
+  line-height: 1.2; /* Line height for better readability */
+  text-align: center; /* Center align the heading */
+  margin: 0; /* Remove default margins */
+  box-sizing: border-box; /* Include padding in element’s total width and height */
+  color: #ececec; /* Default color for the heading text */
+ 
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .responsive-heading {
+    font-size: 8rem; /* Smaller size for tablets and smaller desktops */
+  }
+  .allignmentclass {
+    margin-top: -28rem;
+  }
+}
+
+@media (max-width: 2800px) {
+  .responsive-heading {
+    font-size: 8rem; /* Smaller size for tablets and smaller desktops */
+  }
+  .allignmentclass {
+    margin-top: -32rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .responsive-heading {
+    font-size: 6.75rem; /* Even smaller size for mobile devices */
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+  .weirdpara {
+    font-size: 1.1rem;
+     
+ }
+}
+
+@media (max-width: 480px) {
+  .responsive-heading {
+    font-size: 4.5rem; /* Smallest size for very small screens */
+    padding: 10px; /* Adjust padding for very small screens */
+  }
+
+  .searchfiltercss {
+    font-size: 2rem;  
+    
+  }
+
+  .maincontainer {
+    margin-top: 20px;
+  }
+
+  .weirdpara {
+     font-size: 1rem;
+      
+  }
+}
+
+
+.searchbox {
+  width: 10rem;
+  color: #000000;
+}
+
+
+/* .heading {
+  font-size: 10rem;
+  font-family: "New Amsterdam", sans-serif;
+  letter-spacing: 10px;
+} */
+
+.box {
+  height: 30rem;
+  width: 30rem;
+  background-color: black;
+  color: aliceblue;
+  border-radius: 50px;
+
+}
+
+.btn5 {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    
+    height: 50px;
+    width: 150px;
+    font-weight: 800;
+    background-color: #ee0b0b;
+    color: #ebebeb;
+    border-radius: 20px; 
+}
+
+ .btn5:hover {
+  background-color: #dddfe7;
+  color: rgb(1, 10, 17);
+ }
+
+ .btn3 {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
+  height: 40px;
+  width: 120px;
+  border: 2px solid black;
+  background-color: #ec0a0a;
+  color: aliceblue;
+  border-radius: 20px; 
+}
+
+.btn3:hover {
+background-color: #f0ede6;
+color: rgb(1, 15, 26);
+}
+
+.btn2 {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
+  height: 30px;
+  width: 100px;
+  background-color: red;
+  color: aliceblue;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+input[type="text"] {
+  margin: 20px 0;
+  padding: 10px;
+  width: 60%;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #fff7f7;
+}
+
+
+@media (max-width: 440px) {
+      
+        .btn5 {
+          font-size: 1rem;
+          height: 40px;
+          width: 150px;
+          margin-top: 30px;
+        }
+}
+
+@media screen and (min-width: 441px) and (max-width: 672px) {
+ 
+  .responimg {
+    height: 100px;
+  }
+
+}
+
+
+.pages-list {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: center;
+  gap: 20px;
+  
+}
+
+.page-item {
+  margin: 20px;
+  padding: 15px;
+  border: 2px solid #120101;
+  width: 300px;
+  background-color: #e6e4f0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   border-radius: 20px;
+   color: #000103;
+}
+
+
+
+
+.page-content {
+  margin-top: 10px;
+  font-weight: 400;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;   
+  overflow: auto;       
+  max-width: 100%;      
+  max-height: 300px;     
+  padding: 10px;        
+  box-sizing: border-box; 
+  border: 1px solid #1a0202;  
+  word-wrap: break-word;  
+  border-radius: 20px;
+  
+}
+
+
+.titleforcompany {
+ 
+  font-family: "New Amsterdam", sans-serif;
+  font-size: 2rem;
+  justify-content: center;
+  justify-items: center;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  text-decoration-line: underline;
+  color: #000509;
+}  
+
+.searchfiltercss {
+  font-family: "New Amsterdam", sans-serif;
+  font-size: 4rem;
+  justify-content: center;
+  justify-items: center;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.usernamewhoaddscontent {
+  position: relative;
+  display: flex;
+  font-weight: 400;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color:rgb(18, 96, 185)
+  
+}
+
+.adminpassword {
+  border: 2px solid black;
+  height: 50px;
+  width: auto;
+  border-radius: 20px;
+  justify-content: center;
+  position: relative;
+  display: flex;
+  margin-top: 10px;
+}
+
+.timepass {
+  font-family: "New Amsterdam", sans-serif;
+  font-size: 40px;
+}
+
+.textoverimg {
+  font-family: "New Amsterdam", sans-serif;
+  
+}
+
+@media (min-width:440px) {
+      .textoverimg {
+            
+            font-size: 5rem;
+      }
+}
+
+@media (max-width:441px) and(max-width:1200px) {
+    .textoverimg {
+      font-size: 4rem;
+    }
+}
+
+
+.image-container {
+  position: relative;
+  text-align: center;
+  height: 30rem;
+}
+
+.background-image {
+  width: 100%;
+  height: auto;
+  z-index: -1;
+}
+
+.heading {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  color: rgb(10, 0, 0);
+  font-size: 9rem;
+  font-family: "New Amsterdam", sans-serif;
+  font-weight: 800;
+  font-stretch: expanded;
+}
+
+.btn4 {
+  background-color: #114f81;
+  color: #d4d4cf;
+  border-radius: 20px;
+  border: 2px solid rgb(59, 46, 17);
+  height: 40px;
+  width: 110px;
+  font-size: larger;
+  font-weight: 700;
+}
+
+.btn4:hover {
+  background-color: #d1911b;
+  color: #000000;
+}
+
+
+
+@media  (max-width:1081px) {
+      .heading {
+        position: absolute;
+        margin-top: 100px;
+        font-size: 6rem;
+      }
+
+      .btn4 {
+        margin-top: 20rem;
+      }
+ 
+      .allignmentclass {
+        margin-top: -18rem;
+      }
+
+}       
+
+@media (max-width:1085)  {
+    .btn4 {
+      margin-top: 40rem;
+    }
+    
+}
+
+@media (max-width:763px) {
+   .heading {
+    font-size: 4rem;
+    display: flex;
+    top: -5%;
+   }
+   .btn4 {
+    height: 40px;
+    width: 110px;
+    margin-top: 23rem;
+    
+  }
+
+  .allignmentclass {
+      
+    margin-top: -10rem;
+ }
+
+  
+}
+
+@media (max-width:481px) {
+    .heading {
+      font-size: 3rem;
+    }
+    .btn4 {
+      margin-top: 34rem;
+      height: 30px;
+     width: 80px;
+     font-size: smaller;
+    }
+
+    .allignmentclass {
+       margin-top: -7rem;
+    }
+}
+
+
+.list {
+  columns: 300px;
+}
